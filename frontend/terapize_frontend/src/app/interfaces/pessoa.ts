@@ -20,13 +20,41 @@ export interface Pessoa {
 
 export interface Psicologo extends Pessoa {
   CRP: string;
-  especialidades: number[];
+  especialidade: number[]; // array de especialidade
   linhaRaciocinio: string;
   formacao: string;
   instituicao: string;
   anoConclusao: number;
   biografia: string;
-  valorOfertado: number;
+  valorFixo: number;
 }
 
 export interface Paciente extends Pessoa {}
+
+
+export interface Especialidade {
+  id: number;
+  descricao: string;
+}
+
+export interface Consulta {
+  id: number;
+  dataHora: Date;
+  status: string;
+  linkSessao?: string;
+  obsClinicas?: string;
+  idPaciente: number;
+  idPsicologo: number;
+  idTipoConsulta: number;
+  valorRegistrado: number;
+}
+
+export interface TipoConsulta {
+  id: number;
+  descricao: string;
+}
+
+export interface PsicologoEspecialidade {
+  idPsicologo: number;
+  idEspecialidade: number;
+}

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {MaskitoDirective} from '@maskito/angular';
-import {MaskitoOptions} from '@maskito/core';
 
 @Component({
   selector: 'app-home',
